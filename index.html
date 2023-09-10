@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qr Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="row">
+            <input type="color" class="Light" value="#ffffff">
+            <input type="color" class="Dark">
+            <select class="sizes">
+                <option value="100">100 X 100</option>
+                <option value="200">200 X 200</option>
+                <option value="300">300 X 300</option>
+                <option value="400" selected>400 X 400</option>
+                <option value="500">500 X 500</option>
+                <option value="600">600 X 600</option>
+                <option value="700">700 X 700</option>
+                <option value="800">800 X 800</option>
+                <option value="900">900 X 900</option>
+                <option value="1000">1000 X 1000</option>
+            </select>
+        </div>
+        <input type="text" class="qr-text" placeholder="Enter QR text">
+        <div id="qr-code"></div>
+        <div class="action-container">
+            <a href="#" class="download btn" download="QRCode">
+                <span>Download</span>
+                <img src="images/download.svg" alt="">
+            </a>
+            <button class="btn shareBtn">
+                <span>Share</span>
+                <img src="images/share.svg" alt="">
+            </button>
+        </div>
+    </section>
+
+
+
+    <!-- QRCode.js is javascript library for making QRCode -->
+    <!-- Big thanks to -  https://github.com/davidshimjs/qrcodejs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
